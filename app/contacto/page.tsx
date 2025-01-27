@@ -40,15 +40,15 @@ export default function ContactoPage() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span>123 Calle Principal, Ciudad, País</span>
+                    <span>Santo Domingo, Urb Ciudad Verde, Parque Yasuni y calle f,Mz 77</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>+1 234 567 890</span>
+                    <span>0961683131</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span>info@3dprintshop.com</span>
+                    <span>info@3dprintsto.com</span>
                   </div>
                   <div className="mt-6">
                     <h3 className="font-semibold mb-2">Horario de atención</h3>

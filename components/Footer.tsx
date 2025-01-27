@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">3D Print Shop</h3>
+            <h3 className="text-xl font-bold mb-2">3D Print Sto</h3>
             <p className="text-gray-400">Impresión 3D de calidad a tu alcance</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
