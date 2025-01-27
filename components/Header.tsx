@@ -9,13 +9,13 @@ export default function Header() {
           3D Print Shop
         </Link>
         <div className="space-x-4">
-          <Link href="#servicios" className="text-gray-600 hover:text-primary">
+          <Link href="/servicios" className="text-gray-600 hover:text-primary">
             Servicios
           </Link>
-          <Link href="#productos" className="text-gray-600 hover:text-primary">
+          <Link href="/productos" className="text-gray-600 hover:text-primary">
             Productos
           </Link>
-          <Link href="#contacto" className="text-gray-600 hover:text-primary">
+          <Link href="/contacto" className="text-gray-600 hover:text-primary">
             Contacto
           </Link>
           <Button variant="outline">Iniciar sesión</Button>
