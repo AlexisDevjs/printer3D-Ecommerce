@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button"
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+    <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <nav className="container mx-auto px-4 py-2 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-primary">
           3D Print Shop
         </Link>
@@ -18,7 +18,7 @@ export default function Header() {
           <Link href="/contacto" className="text-gray-600 hover:text-primary">
             Contacto
           </Link>
-          <Button variant="outline">Iniciar sesión</Button>
+          <Button variant="outline">Cotizar</Button>
         </div>
       </nav>
     </header>
