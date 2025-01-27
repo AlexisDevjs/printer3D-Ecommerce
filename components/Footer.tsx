@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2">3D Print Sto</h3>
+            <h3 className="text-xl font-bold mb-2">Printer3D Sto</h3>
             <p className="text-gray-400">Impresión 3D de calidad a tu alcance</p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-          <p>&copy; 2023 3D Print Shop. Todos los derechos reservados.</p>
+          <p>&copy; 2023 Printer3D Sto. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
