@@ -2,13 +2,22 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-primary to-primary-foreground text-white py-20">
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Printer3D Sto a tu alcance</h1>
-        <p className="text-xl mb-8">Cotiza, modela y adquiere productos impresos en 3D</p>
-        <Button size="lg" variant="secondary">
-          Cotiza ahora
-        </Button>
+    <section className="relative h-screen w-full overflow-hidden bg-black">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+        <div className="h-[60vh] w-[60vw] rounded-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#53cde2] via-[#2ca58d] to-[#1a5e9d]/20 opacity-25 blur-3xl"></div>
+      </div>
+      <div className="relative z-10 flex h-full items-center justify-center">
+        <div className="text-center">
+          <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">Printer3D Sto a tu alcance</h1>
+          <p className="mb-8 text-xl text-white/90">Cotiza, modela y adquiere productos impresos en 3D</p>
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+          >
+            Cotiza ahora
+          </Button>
+        </div>
       </div>
     </section>
   )
