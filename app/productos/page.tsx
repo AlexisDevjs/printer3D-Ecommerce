@@ -9,49 +9,49 @@ export default function ProductosPage() {
     {
       name: "Figura decorativa",
       price: 29.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/figura_decorativa.png",
       description: "Elegante figura impresa en 3D, perfecta para decorar tu hogar u oficina.",
     },
     {
       name: "Soporte para móvil",
       price: 14.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/soporte_para_mobile.png",
       description: "Práctico soporte para tu smartphone, compatible con la mayoría de los modelos.",
     },
     {
       name: "Maceta personalizada",
-      price: 19.99,
-      image: "/placeholder.svg?height=300&width=300",
+      price: 15.99,
+      image: "/images/maceta_personalizada.png",
       description: "Maceta única y personalizable, ideal para tus plantas de interior.",
     },
     {
       name: "Llavero personalizado",
       price: 9.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/llaveros.png",
       description: "Llavero impreso en 3D, personalizable con nombres o logotipos.",
     },
     {
       name: "Organizador de escritorio",
       price: 24.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/escritorio.png",
       description: "Mantén tu espacio de trabajo ordenado con este organizador impreso en 3D.",
     },
     {
-      name: "Carcasa para AirPods",
+      name: "Carcasa para iPhone",
       price: 12.99,
-      image: "/placeholder.svg?height=300&width=300",
-      description: "Protege tus AirPods con estilo con esta carcasa impresa en 3D.",
+      image: "/images/carcasa.png",
+      description: "Protege tu iPhone con estilo con esta carcasa impresa en 3D.",
     },
     {
       name: "Lámpara de mesa",
       price: 39.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/lampara.png",
       description: "Ilumina tu espacio con esta lámpara de diseño único impresa en 3D.",
     },
     {
       name: "Posavasos personalizados",
       price: 15.99,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/images/posavasos.png",
       description: "Set de 4 posavasos personalizables, impresos en 3D con diseños a elección.",
     },
   ]
@@ -68,11 +68,11 @@ export default function ProductosPage() {
                 <Card key={index} className="flex flex-col">
                   <CardHeader>
                     <Image
-                      src={producto.image || "/placeholder.svg"}
+                      src={producto.image}
                       alt={producto.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-48 object-cover mb-4"
+                      width={400}
+                      height={400}
+                      className="w-full h-48 object-contain mb-4"
                     />
                     <CardTitle>{producto.name}</CardTitle>
                   </CardHeader>

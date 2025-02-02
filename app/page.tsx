@@ -4,6 +4,7 @@ import Services from "@/components/Services"
 import ProductPreview from "@/components/ProductPreview"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import { Toaster } from "@/components/ui/sonner"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <Toaster richColors />
     </div>
   )
 }

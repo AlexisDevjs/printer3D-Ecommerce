@@ -61,8 +61,29 @@ export default function ServiciosPage() {
               {servicios.map((servicio, index) => (
                 <Card key={index} className="flex flex-col">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
-                      <servicio.icon className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="url(#icon-gradient)" />
+                        <foreignObject width="48" height="48">
+                          <div className="flex items-center justify-center w-full h-full">
+                            <servicio.icon className="w-6 h-6 text-white" />
+                          </div>
+                        </foreignObject>
+                        <defs>
+                          <linearGradient
+                            id="icon-gradient"
+                            x1="0"
+                            y1="0"
+                            x2="48"
+                            y2="48"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#53cde2" />
+                            <stop offset="0.5" stopColor="#2ca58d" />
+                            <stop offset="1" stopColor="#1a5e9d" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
                     <CardTitle>{servicio.title}</CardTitle>
                     <CardDescription>{servicio.description}</CardDescription>

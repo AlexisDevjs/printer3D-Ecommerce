@@ -55,7 +55,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${getHeaderStyle()}`}>
-      <nav className="container mx-auto flex items-center justify-between px-4 py-3 font-medium">
+      <nav className="container mx-auto flex justify-between items-center px-4 py-4 font-medium">
         <Link
           href="/"
           className={`text-2xl font-bold ${
@@ -66,33 +66,35 @@ export default function Header() {
         >
           Printer3D Sto
         </Link>
-        <div className="hidden items-center space-x-6 md:flex">
+        <div className="hidden md:flex items-center justify-center space-x-6">
           {["Servicios", "Productos", "Contacto"].map((item) => (
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className={`relative transition-colors ${getLinkStyle(pathname === `/${item.toLowerCase()}`)} group`}
+              className={`relative transition-colors ${getLinkStyle(pathname === `/${item.toLowerCase()}`)} group text-[17px]`}
             >
               {item}
               <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#1a5e9d] via-[#2ca58d] to-[#53cde2] transition-all duration-300 ease-out group-hover:w-full"></span>
             </Link>
           ))}
+        </div>
+        <div className="flex justify-end">
           <Button
             variant={isScrolled || !isHomePage ? "default" : "secondary"}
-            className={`transition-all duration-300 ${getButtonStyle()}`}
+            className={`hidden md:inline-flex transition-all duration-300 ${getButtonStyle()}`}
           >
             Cotizar
           </Button>
+          <button
+            className={`md:hidden ${isScrolled || !isHomePage ? "text-[#1a5e9d]" : "text-white"}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
         </div>
-        <button
-          className={`md:hidden ${isScrolled || !isHomePage ? "text-[#1a5e9d]" : "text-white"}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <Menu className="h-6 w-6" />
-        </button>
       </nav>
       {isMenuOpen && (
-        <div className={`py-2 md:hidden ${isScrolled || !isHomePage ? "bg-white" : "bg-gray-900"}`}>
+        <div className={`py-2 md:hidden col-span-3 ${isScrolled || !isHomePage ? "bg-white" : "bg-gray-900"}`}>
           <div className="container mx-auto flex flex-col space-y-2 px-4">
             {["Servicios", "Productos", "Contacto"].map((item) => (
               <Link

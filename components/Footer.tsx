@@ -49,8 +49,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/70">
-          <p>&copy; 2023 Printer3D Sto. Todos los derechos reservados.</p>
+        <div className="mt-8 pt-9 border-t border-white/20 text-center text-white/70">
+          <p className="pt-4">&copy; 2023 Printer3D Sto. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
