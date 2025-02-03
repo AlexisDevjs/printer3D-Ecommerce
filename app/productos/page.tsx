@@ -71,7 +71,7 @@ export default function ProductosPage() {
       <main className="flex-grow mt-10">
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold text-center mb-12 animate-fade-down animate-duration-[800ms]">
+            <h1 className="text-4xl font-bold text-center mb-12 animate-fade-down animate-duration-[700ms]">
               Nuestros Productos
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -87,7 +87,7 @@ export default function ProductosPage() {
                         alt={producto.name}
                         width={400}
                         height={400}
-                        className="overflow-hidden w-full h-48 object-contain mb-4 transition-transform duration-300 group-hover:scale-[1.2]"
+                        className="overflow-hidden w-full h-48 object-contain mb-4 transition-transform duration-300 group-hover:scale-[1.2] animate-fade animate-delay-150"
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4"></div>

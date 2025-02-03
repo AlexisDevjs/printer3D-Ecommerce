@@ -41,11 +41,11 @@ export default function ProductPreview() {
   return (
     <section id="productos" className="py-20">
       <div className="container mx-auto px-4">
-        <FadeInCascade animation="fade-up">
+        <FadeInSection animation="fade-up">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#1a5e9d]">
             Productos Destacados
           </h2>
-        </FadeInCascade>
+        </FadeInSection>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((producto, index) => (
             <Card
@@ -53,6 +53,7 @@ export default function ProductPreview() {
               className="group flex flex-col transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl bg-gradient-to-br from-white to-gray-100"
             >
               <CardHeader>
+                <FadeInCascade animation="fade">
                 <div className="overflow-hidden">
                   <Image
                     src={producto.image}
@@ -62,6 +63,7 @@ export default function ProductPreview() {
                     className="overflow-hidden w-full h-48 object-contain mb-4 transition-transform duration-300 group-hover:scale-[1.2]"
                   />
                 </div>
+                </FadeInCascade>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4"></div>
                 <CardTitle className="text-xl font-bold text-center">
                   {producto.name}

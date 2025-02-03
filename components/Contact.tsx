@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useState } from "react";
 import { toast } from "sonner";
 import FadeInSection from "./FadeInSection";
-import FadeInCascade from "./FadeInCascade";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -38,11 +37,11 @@ export default function Contact() {
   return (
     <section id="contacto" className="pb-20 pt-14 bg-gray-50">
       <div className="container mx-auto px-4">
-        <FadeInCascade animation="fade-up">
+        <FadeInSection animation="fade-up">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#1a5e9d]">
             Contáctanos
           </h2>
-        </FadeInCascade>
+        </FadeInSection>
         <form onSubmit={sendEmail} className="max-w-md mx-auto space-y-4">
           <Input type="text" name="name" placeholder="Nombre" />
           <Input type="tel" name="phone" placeholder="Teléfono" />

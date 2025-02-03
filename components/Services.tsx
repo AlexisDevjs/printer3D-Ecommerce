@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import { CuboidIcon as Cube, Calculator, ShoppingCart } from "lucide-react";
 import FadeInSection from "./FadeInSection";
-import FadeInCascade from "./FadeInCascade";
 
 export default function Services() {
   const services = [
@@ -32,11 +31,11 @@ export default function Services() {
   return (
     <section id="servicios" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <FadeInCascade animation="fade-up">
+        <FadeInSection animation="fade-up">
           <h2 className="text-3xl font-bold text-center mb-12 text-[#1a5e9d]">
             Nuestros Servicios
           </h2>
-        </FadeInCascade>
+        </FadeInSection>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card

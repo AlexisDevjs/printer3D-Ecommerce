@@ -1,25 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 
-
 interface Props {
-  children: React.ReactNode
-  fadeTo: 'right' | 'left' | 'up' | 'down'
+  children: React.ReactNode;
+  animation: "fade-up" | "fade-down" | "fade-left" | "fade-right" | "fade";
+  delayBase?: number;
 }
 
-const FadeInSection: React.FC<Props> = ({
+const FadeInCascade: React.FC<Props> = ({
   children,
-  fadeTo
+  animation,
+  delayBase = 100,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const fadeType = `fade-${fadeTo}`;
+  const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
+
+  const childrenArray = Array.isArray(children) ? children : [children];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
+          childrenArray.forEach((_, index) => {
+            setTimeout(() => {
+              setVisibleIndexes((prev) => [...prev, index]);
+            }, index * delayBase);
+          });
         }
       },
       { threshold: 0.2 }
@@ -28,18 +33,24 @@ const FadeInSection: React.FC<Props> = ({
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [delayBase, childrenArray]);
 
   return (
-    <div
-      ref={ref}
-      className={`transition-opacity duration-1000 ${
-        isVisible ? `animate-${fadeType}` : ""
-      }`}
-    >
-      {children}
+    <div ref={ref}>
+      {childrenArray.map((child, index) => (
+        <div
+          key={index}
+          className={`transition-opacity animate-duration-700 ${
+            visibleIndexes.includes(index)
+              ? `animate-${animation}`
+              : "opacity-0"
+          }`}
+        >
+          {child}
+        </div>
+      ))}
     </div>
   );
 };
 
-export default FadeInSection
+export default FadeInCascade;
