@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="w-full md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-4">
-              <FadeInCascade animation="fade">
+              <FadeInCascade animation="fade-up">
                 <a
                   href="#"
                   className="text-white/90 hover:text-[#53cde2] transition-colors"

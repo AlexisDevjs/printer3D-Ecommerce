@@ -11,7 +11,7 @@ export default function Hero() {
           <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
             Printer3D Sto a tu alcance
           </h1>
-          <p className="mb-8 text-xl text-white/90 animate-fade-up animate-delay-200">
+          <p className="mb-8 text-xl text-white/90 animate-fade-up animate-delay-100">
             Cotiza, modela y adquiere productos impresos en 3D
           </p>
           <Button
