@@ -1,8 +1,21 @@
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { CuboidIcon as Cube, Calculator, ShoppingCart, Printer, Palette, Truck } from "lucide-react"
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  CuboidIcon as Cube,
+  Calculator,
+  ShoppingCart,
+  Printer,
+  Palette,
+  Truck,
+} from "lucide-react";
 
 export default function ServiciosPage() {
   const servicios = [
@@ -48,7 +61,7 @@ export default function ServiciosPage() {
       details:
         "Realizamos envíos a todo el país. Nuestro embalaje especializado asegura que tus piezas impresas en 3D lleguen en perfectas condiciones.",
     },
-  ]
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -56,14 +69,27 @@ export default function ServiciosPage() {
       <main className="flex-grow">
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4 mt-10">
-            <h1 className="text-4xl font-bold text-center mb-12">Nuestros Servicios</h1>
+            <h1 className="text-4xl font-bold text-center mb-12 animate-fade-down animate-delay-150">
+              Nuestros Servicios
+            </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {servicios.map((servicio, index) => (
                 <Card key={index} className="flex flex-col">
                   <CardHeader>
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="24" cy="24" r="24" fill="url(#icon-gradient)" />
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="24"
+                          cy="24"
+                          r="24"
+                          fill="url(#icon-gradient)"
+                        />
                         <foreignObject width="48" height="48">
                           <div className="flex items-center justify-center w-full h-full">
                             <servicio.icon className="w-6 h-6 text-white" />
@@ -102,6 +128,5 @@ export default function ServiciosPage() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
-

@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import WhatsAppButton from "./WhatsAppButton";
+import FadeInSection from "./FadeInSection";
 
 export default function ProductPreview() {
   const products = [
@@ -37,9 +40,11 @@ export default function ProductPreview() {
   return (
     <section id="productos" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Productos Destacados
-        </h2>
+        <FadeInSection fadeTo="left">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Productos Destacados
+          </h2>
+        </FadeInSection>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((producto, index) => (
             <Card

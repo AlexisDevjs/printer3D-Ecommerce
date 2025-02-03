@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FormEvent, useState } from "react";
 import { toast } from "sonner";
+import FadeInSection from "./FadeInSection";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -14,7 +15,7 @@ export default function Contact() {
 
     const formData = new FormData(event.currentTarget);
     const dataValues = Object.fromEntries(formData.entries());
-    console.log("🚀 ~ sendEmail ~ dataValues:", dataValues)
+    console.log("🚀 ~ sendEmail ~ dataValues:", dataValues);
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -23,7 +24,7 @@ export default function Contact() {
     });
 
     const dataRes = await response.json();
-    console.log("🚀 ~ sendEmail ~ dataRes:", dataRes)
+    console.log("🚀 ~ sendEmail ~ dataRes:", dataRes);
     const message = dataRes.success ? "Mensaje enviado ✅" : "Error ❌";
 
     if (dataRes.success) {
@@ -36,7 +37,11 @@ export default function Contact() {
   return (
     <section id="contacto" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Contáctanos</h2>
+        <FadeInSection fadeTo="down">
+          <h2 className="text-3xl font-bold text-center mb-12 animate-fade-down animate-delay-150">
+            Contáctanos
+          </h2>
+        </FadeInSection>
         <form onSubmit={sendEmail} className="max-w-md mx-auto space-y-4">
           <Input type="text" name="name" placeholder="Nombre" />
           <Input type="tel" name="phone" placeholder="Teléfono" />

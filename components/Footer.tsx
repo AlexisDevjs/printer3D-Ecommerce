@@ -1,4 +1,7 @@
-import Link from "next/link"
+"use client";
+
+import Link from "next/link";
+import FadeInCascade from "./FadeInCascade";
 
 export default function Footer() {
   return (
@@ -12,48 +15,73 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#53cde2] via-[#2ca58d] to-[#1a5e9d] bg-clip-text text-transparent">
               Printer3D Sto
             </h3>
-            <p className="text-white/90">Impresión 3D de calidad a tu alcance</p>
+            <p className="text-white/90">
+              Impresión 3D de calidad a tu alcance
+            </p>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <h4 className="text-lg font-semibold mb-2">Enlaces rápidos</h4>
             <ul className="space-y-2">
-              <li>
-                <Link href="/servicios" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                  Servicios
-                </Link>
-              </li>
-              <li>
-                <Link href="/productos" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                  Productos
-                </Link>
-              </li>
-              <li>
-                <Link href="/contacto" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                  Contacto
-                </Link>
-              </li>
+              <FadeInCascade animation="fade-up">
+                <li>
+                  <Link
+                    href="/servicios"
+                    className="text-white/90 hover:text-[#53cde2] transition-colors"
+                  >
+                    Servicios
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/productos"
+                    className="text-white/90 hover:text-[#53cde2] transition-colors"
+                  >
+                    Productos
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contacto"
+                    className="text-white/90 hover:text-[#53cde2] transition-colors"
+                  >
+                    Contacto
+                  </Link>
+                </li>
+              </FadeInCascade>
             </ul>
           </div>
           <div className="w-full md:w-1/3">
             <h4 className="text-lg font-semibold mb-2">Síguenos</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                Facebook
-              </a>
-              <a href="#" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                Twitter
-              </a>
-              <a href="#" className="text-white/90 hover:text-[#53cde2] transition-colors">
-                Instagram
-              </a>
+              <FadeInCascade animation="fade">
+                <a
+                  href="#"
+                  className="text-white/90 hover:text-[#53cde2] transition-colors"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="#"
+                  className="text-white/90 hover:text-[#53cde2] transition-colors"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="#"
+                  className="text-white/90 hover:text-[#53cde2] transition-colors"
+                >
+                  Instagram
+                </a>
+              </FadeInCascade>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-9 border-t border-white/20 text-center text-white/70">
-          <p className="pt-4">&copy; 2023 Printer3D Sto. Todos los derechos reservados.</p>
+          <p className="pt-4">
+            &copy; 2023 Printer3D Sto. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
