@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
@@ -8,36 +8,21 @@ export default function Hero() {
       </div>
       <div className="relative z-10 flex h-full items-center justify-center">
         <div className="text-center">
-          <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">Printer3D Sto a tu alcance</h1>
-          <p className="mb-8 text-xl text-white/90">Cotiza, modela y adquiere productos impresos en 3D</p>
+          <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">
+            Printer3D Sto a tu alcance
+          </h1>
+          <p className="mb-8 text-xl text-white/90 animate-fade-up animate-delay-200">
+            Cotiza, modela y adquiere productos impresos en 3D
+          </p>
           <Button
             size="lg"
             variant="outline"
-            className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
+            className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 animate-fade-up animate-once animate-delay-300"
           >
             Cotiza ahora
           </Button>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 5V19M12 19L19 12M12 19L5 12"
-            stroke="url(#gradient)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <defs>
-            <linearGradient id="gradient" x1="5" y1="12" x2="19" y2="12" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#53cde2" />
-              <stop offset="0.5" stopColor="#2ca58d" />
-              <stop offset="1" stopColor="#1a5e9d" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
     </section>
-  )
+  );
 }
-

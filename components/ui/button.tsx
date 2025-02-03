@@ -12,7 +12,7 @@ const buttonVariants = cva(
           "bg-gradient-to-r from-[#1a5e9d] via-[#2ca58d] to-[#53cde2] text-white hover:from-[#0e3c64] hover:via-[#1f7a6a] hover:to-[#3ba4c8] hover:animate-glow",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-gradient-to-r hover:from-[#1a5e9d] hover:via-[#2ca58d] hover:to-[#53cde2] hover:text-white hover:animate-glow",
+          "border border-input bg-background hover:bg-gradient-to-r hover:from-[#1a5e9d] hover:via-[#2ca58d] hover:to-[#53cde2] hover:text-white",
         secondary:
           "bg-gradient-to-r from-[#2ca58d] to-[#53cde2] text-white hover:from-[#1f7a6a] hover:to-[#3ba4c8] hover:animate-glow",
         ghost: "hover:bg-accent/10 hover:text-accent hover:animate-glow",
