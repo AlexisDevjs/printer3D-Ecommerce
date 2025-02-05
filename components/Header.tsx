@@ -202,6 +202,7 @@ export default function Header() {
               ))}
               <div>
                 <Button
+                onClick={handleClick}
                   variant={isScrolled || !isHomePage ? "default" : "secondary"}
                   className={`w-full transition-all duration-300 ${getButtonStyle()}`}
                 >
