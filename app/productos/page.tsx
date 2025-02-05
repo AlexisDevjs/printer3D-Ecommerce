@@ -103,6 +103,7 @@ export default function ProductosPage() {
                       </p>
                       <WhatsAppButton
                         productName={producto.name}
+                        price={producto.price}
                         imageUrl={`${process.env.NEXT_PUBLIC_SITE_URL}${producto.image}`}
                       />
                     </div>

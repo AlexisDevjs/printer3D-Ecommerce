@@ -1,22 +1,31 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 interface WhatsAppButtonProps {
-  productName: string
-  imageUrl: string
+  productName: string;
+  imageUrl: string;
+  price: number;
 }
 
-export default function WhatsAppButton({ productName, imageUrl }: WhatsAppButtonProps) {
-  const [isHovered, setIsHovered] = useState(false)
+export default function WhatsAppButton({
+  productName,
+  price,
+  imageUrl,
+}: WhatsAppButtonProps) {
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
     const message = encodeURIComponent(
-      `Hola, me interesa comprar este producto: ${productName}\n\nImagen del producto: ${imageUrl}`,
-    )
-    window.open(`https://wa.me/593969506019?text=${message}`, "_blank")
-  }
+      `Hola, me interesa comprar este producto:
+
+      *${productName}*
+      *Precio*: $${price.toFixed(2)}
+      Imagen del producto: https://${imageUrl}`
+        );
+    window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
+  };
 
   return (
     <Button
@@ -45,6 +54,5 @@ export default function WhatsAppButton({ productName, imageUrl }: WhatsAppButton
         <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
       </svg>
     </Button>
-  )
+  );
 }
-

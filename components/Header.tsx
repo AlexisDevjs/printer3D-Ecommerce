@@ -62,6 +62,11 @@ export default function Header() {
     }
   };
 
+  const handleClick = () => {
+    const message = "Hola, me gustaría cotizar una impresión 3D";
+    window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
+  };
+
   const menuItems = ["Servicios", "Productos", "Contacto"];
 
   const menuVariants = {
@@ -131,6 +136,7 @@ export default function Header() {
           <Button
             variant={isScrolled || !isHomePage ? "default" : "secondary"}
             className={`hidden md:inline-flex transition-all duration-300 ${getButtonStyle()}`}
+            onClick={handleClick}
           >
             Cotizar
           </Button>

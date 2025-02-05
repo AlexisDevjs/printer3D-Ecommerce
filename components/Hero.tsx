@@ -1,6 +1,13 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
+  const handleClick = () => {
+    const message = 'Hola, me gustaría cotizar una impresión 3D';
+    window.open(`https://wa.me/593969506019?text=${message}`, '_blank');
+  }
+
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black flex flex-col justify-between">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
@@ -18,6 +25,7 @@ export default function Hero() {
             size="lg"
             variant="outline"
             className="border-white bg-white/10 text-white backdrop-blur-sm hover:bg-white/20 animate-fade-up animate-delay-200 animate-duration-[850ms]"
+            onClick={handleClick}
           >
             Cotiza ahora
           </Button>

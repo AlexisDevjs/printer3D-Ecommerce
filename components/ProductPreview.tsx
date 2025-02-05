@@ -75,6 +75,7 @@ export default function ProductPreview() {
                   <p className="text-lg font-bold mb-2">${producto.price}</p>
                   <WhatsAppButton
                     productName={producto.name}
+                    price={producto.price}
                     imageUrl={`${process.env.NEXT_PUBLIC_SITE_URL}${producto.image}`}
                   />
                 </div>
