@@ -4,7 +4,7 @@ import Services from "@/components/Services"
 import ProductPreview from "@/components/ProductPreview"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "sonner"
 
 export default function Home() {
   return (

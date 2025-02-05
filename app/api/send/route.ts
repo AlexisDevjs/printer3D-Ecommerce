@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-export interface ContactFormData {
+const resend = new Resend("re_123456789");
+
+interface ContactFormData {
   name: string;
   email: string;
   phone: string;
@@ -10,8 +12,8 @@ export interface ContactFormData {
 
 export async function POST(req: Request) {
   try {
-    const body: ContactFormData = await req.json()
-    const { name, email, phone, message } = body
+    const body: ContactFormData = await req.json();
+    const { name, email, phone, message } = body;
 
     if (!name || !email || !phone || !message) {
       return NextResponse.json(
@@ -20,23 +22,9 @@ export async function POST(req: Request) {
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.GOOGLE_PASSWORD,
-      },
-    });
+    resend.emails.send()
 
-    const mailOptions = {
-      from: email,
-      to: process.env.EMAIL,
-      subject: `Nuevo mensaje de ${name}`,
-      text: `De: ${name} <${email}>\n\n${message}`,
-    };
-
-    await transporter.sendMail(mailOptions);
-
+    
     return NextResponse.json({
       success: true,
       message: "Correo enviado correctamente.",

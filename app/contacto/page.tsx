@@ -11,6 +11,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
+import FormTemplate from "@/components/FormTemplate";
 
 export default function ContactoPage() {
   return (
@@ -32,15 +33,7 @@ export default function ContactoPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form className="space-y-4">
-                    <Input type="text" placeholder="Nombre" />
-                    <Input type="email" placeholder="Email" />
-                    <Input type="tel" placeholder="Teléfono" />
-                    <Textarea placeholder="Mensaje" />
-                    <Button type="submit" className="w-full">
-                      Enviar mensaje
-                    </Button>
-                  </form>
+                  <FormTemplate />
                 </CardContent>
               </Card>
               <Card>
