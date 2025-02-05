@@ -20,9 +20,9 @@ export default function WhatsAppButton({
     const message = encodeURIComponent(
       `Hola, me interesa comprar este producto:
 
-    *${productName}*
-    *Precio*: $${price.toFixed(2)}
-    *Imagen*: https://${imageUrl}`
+*${productName}*
+*Precio*: $${price.toFixed(2)}
+*Imagen*: https://${imageUrl}`
       );
     window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
   };

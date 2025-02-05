@@ -1,3 +1,5 @@
+'use client';
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
@@ -31,7 +33,7 @@ export default function ServiciosPage() {
       description: "Obtén un presupuesto detallado al instante.",
       icon: Calculator,
       details:
-        "Utilizamos un sistema avanzado de cotización que tiene en cuenta el tamaño del modelo, el material utilizado y el tiempo de impresión para ofrecerte el mejor precio posible.",
+        "Cotizamos tus modelados o impresiones tieniendo en cuenta el tamaño del modelo, el material utilizado y el tiempo de impresión para ofrecerte el mejor precio posible.",
     },
     {
       title: "Impresión 3D",
@@ -74,7 +76,7 @@ export default function ServiciosPage() {
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {servicios.map((servicio, index) => (
-                <Card key={index} className="flex flex-col">
+                <Card key={index} className="flex flex-col transition-all duration-300 hover:shadow-lg hover:translate-y-1">
                   <CardHeader>
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4">
                       <svg
@@ -116,7 +118,16 @@ export default function ServiciosPage() {
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-gray-600 mb-4">{servicio.details}</p>
-                    <Button variant="outline" className="w-full">
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => {
+                        window.open(
+                          `https://wa.me/593969506019?text=Hola quisiera más información acerca de *${servicio.title}*`,
+                          "_blank"
+                        );
+                      }}
+                    >
                       Más información
                     </Button>
                   </CardContent>

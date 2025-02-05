@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import type React from "react"; // Added import for React
-import Head from "next/head";
+import type React from "react";
 
 export const metadata: Metadata = {
   title: "Printer 3D Sto - Impresión 3D de Calidad",
@@ -35,7 +34,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: "/site.webmanifest",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
     { media: "(prefers-color-scheme: dark)", color: "#1a5e9d" },
@@ -54,9 +52,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body>{children}</body>
     </html>
   );
