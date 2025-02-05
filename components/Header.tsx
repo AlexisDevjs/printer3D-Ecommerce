@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
@@ -110,13 +111,15 @@ export default function Header() {
       <nav className="container mx-auto flex justify-between items-center px-4 py-4 font-medium">
         <Link
           href="/"
-          className={`text-2xl font-bold ${
+          className={`flex items-center gap-4 text-2xl font-bold ${
             isScrolled || !isHomePage
               ? "bg-gradient-to-r from-[#1a5e9d] via-[#2ca58d] to-[#53cde2] bg-clip-text text-transparent"
               : "text-white"
           }`}
         >
-          Printer3D Sto
+          <Image alt="logo" width={55} height={55} src="/images/logo.png" />
+
+          <span>Printer3D Sto</span>
         </Link>
         <div className="hidden md:flex items-center justify-center space-x-6">
           {["Servicios", "Productos", "Contacto"].map((item) => (
@@ -202,7 +205,7 @@ export default function Header() {
               ))}
               <div>
                 <Button
-                onClick={handleClick}
+                  onClick={handleClick}
                   variant={isScrolled || !isHomePage ? "default" : "secondary"}
                   className={`w-full transition-all duration-300 ${getButtonStyle()}`}
                 >
