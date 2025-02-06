@@ -9,7 +9,7 @@ export default function ProductosPage() {
   const productos = [
     {
       name: "Figura decorativa",
-      price: 29.99,
+      price: 13.99,
       image: "/images/figura_decorativa.png",
       description:
         "Elegante figura impresa en 3D, perfecta para decorar tu hogar u oficina.",
@@ -51,14 +51,14 @@ export default function ProductosPage() {
     },
     {
       name: "Lámpara de mesa",
-      price: 39.99,
+      price: 18.99,
       image: "/images/lampara.png",
       description:
         "Ilumina tu espacio con esta lámpara de diseño único impresa en 3D.",
     },
     {
       name: "Posavasos personalizados",
-      price: 15.99,
+      price: 11.99,
       image: "/images/posavasos.png",
       description:
         "Set de 4 posavasos personalizables, impresos en 3D con diseños a elección.",

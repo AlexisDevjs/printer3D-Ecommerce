@@ -117,7 +117,7 @@ export default function Header() {
               : "text-white"
           }`}
         >
-          <Image alt="logo" width={55} height={55} src="/images/logo.png" />
+          <Image className="aspect-square" alt="logo" width={55} height={55} src="/images/logo.png" />
 
           <span>Printer3D Sto</span>
         </Link>

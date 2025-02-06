@@ -10,7 +10,7 @@ export default function ProductPreview() {
   const products = [
     {
       name: "Figura decorativa",
-      price: 29.99,
+      price: 13.99,
       image: "/images/figura_decorativa.png",
       description:
         "Elegante figura impresa en 3D, perfecta para decorar tu hogar u oficina.",
@@ -31,7 +31,7 @@ export default function ProductPreview() {
     },
     {
       name: "Lámpara de mesa",
-      price: 39.99,
+      price: 18.99,
       image: "/images/lampara.png",
       description:
         "Ilumina tu espacio con esta lámpara de diseño único impresa en 3D.",
