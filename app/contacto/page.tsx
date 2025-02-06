@@ -53,11 +53,11 @@ export default function ContactoPage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>+1 234 567 890</span>
+                    <span>0961683131</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span>info@3dprintshop.com</span>
+                    <span>printer3dsto@gmail.com</span>
                   </div>
                   <div className="mt-6">
                     <h3 className="font-semibold mb-2">Horario de atención</h3>
