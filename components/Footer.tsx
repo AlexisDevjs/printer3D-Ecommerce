@@ -4,6 +4,8 @@ import Link from "next/link";
 import FadeInCascade from "./FadeInCascade";
 
 export default function Footer() {
+  const message = 'Hola, me gustaría cotizar una página web'
+
   return (
     <footer className="relative bg-black text-white py-16 overflow-hidden">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
@@ -96,6 +98,9 @@ export default function Footer() {
           <p className="pt-4">
             &copy; 2023 Printer3D Sto. Todos los derechos reservados.
           </p>
+          <button onClick={() => {
+            window.open(`https://wa.me/593961683131?text=${message}`, "_blank");
+          }}>Creado por Alexis Developer</button>
         </div>
       </div>
     </footer>
