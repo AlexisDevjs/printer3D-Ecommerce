@@ -24,7 +24,7 @@ export default function WhatsAppButton({
 *Precio*: $${price.toFixed(2)}
 *Imagen*: https://${imageUrl}`
       );
-    window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
+    window.open(`https://wa.me/593961683131?text=${message}`, "_blank");
   };
 
   return (

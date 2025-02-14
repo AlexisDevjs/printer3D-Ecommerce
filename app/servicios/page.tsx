@@ -123,7 +123,7 @@ export default function ServiciosPage() {
                       className="w-full"
                       onClick={() => {
                         window.open(
-                          `https://wa.me/593969506019?text=Hola quisiera más información acerca de *${servicio.title}*`,
+                          `https://wa.me/593961683131?text=Hola quisiera más información acerca de *${servicio.title}*`,
                           "_blank"
                         );
                       }}

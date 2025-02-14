@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   const handleClick = () => {
     const message = 'Hola, me gustaría cotizar una impresión 3D';
-    window.open(`https://wa.me/593969506019?text=${message}`, '_blank');
+    window.open(`https://wa.me/593961683131?text=${message}`, '_blank');
   }
 
   return (

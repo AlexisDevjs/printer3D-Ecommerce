@@ -65,7 +65,7 @@ export default function Header() {
 
   const handleClick = () => {
     const message = "Hola, me gustaría cotizar una impresión 3D";
-    window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
+    window.open(`https://wa.me/593961683131?text=${message}`, "_blank");
   };
 
   const menuItems = ["Servicios", "Productos", "Contacto"];
@@ -117,7 +117,7 @@ export default function Header() {
               : "text-white"
           }`}
         >
-          <Image className="aspect-square" alt="logo" width={55} height={55} src="/images/logo.png" />
+          <Image alt="logo" width={55} height={55} src="/images/logo.png" />
 
           <span>Printer3D Sto</span>
         </Link>
