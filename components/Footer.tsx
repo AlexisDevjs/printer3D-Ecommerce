@@ -96,11 +96,11 @@ export default function Footer() {
         </div>
         <div className="mt-8 pt-9 border-t border-white/20 text-center text-white/70 flex flex-col gap-4">
           <p className="pt-4">
-            &copy; 2023 Printer3D Sto. Todos los derechos reservados.
+            &copy; 2025 Printer3D Sto. Todos los derechos reservados.
           </p>
-          <button onClick={() => {
+          {/*<button onClick={() => {
             window.open(`https://wa.me/593969506019?text=${message}`, "_blank");
-          }}>Creado por <span className="underline">Alexis Developer</span></button>
+          }}>Creado por <span className="underline">Alexis Developer</span></button> */}
         </div>
       </div>
     </footer>
